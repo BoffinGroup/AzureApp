@@ -10,16 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  buildConfiguration: 'Release'
-
-  steps:
-
-  - task: DotNetCoreCLI@3
-    inputs:
-      command: test
-      projects: '/AzureTest/*.csproj'
-      arguments: '--configuration$(buildConfiguration)'
- 
+  buildConfiguration: 'Release' 
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
