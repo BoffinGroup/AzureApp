@@ -12,7 +12,9 @@ pool:
 variables:
   buildConfiguration: 'Release'
 
-- task: DotNetCoreCLI@3
+  steps:
+
+  - task: DotNetCoreCLI@3
     inputs:
         command: test
         projects: '**/AzureTest/*.csproj'
